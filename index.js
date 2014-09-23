@@ -33,7 +33,7 @@ GitInfo.prototype.optimize = function(data, path, callback) {
     , hash    : exec('git rev-parse HEAD').output.trim()
     , date    : new Date()
   };
-  dataStr = JSON.stringify(data, undefined, 2);
+  var dataStr = JSON.stringify(data, undefined, 2);
 
   fs.writeFile(filePath, dataStr, function (err) {
     callback(err);
