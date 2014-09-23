@@ -27,16 +27,16 @@ GitInfo.prototype.optimize = function(data, path, callback) {
   }
 
   var filePath = sysPath.join(this._config.outputDirectory, this._config.fileName);
-  var data = {
+  var gitInfo = {
       branch  : exec('git branch | sed -n "/\* /s///p"').output.trim()
     , tag     : exec('git describe --abbrev=0').output.trim()
     , hash    : exec('git rev-parse HEAD').output.trim()
     , date    : new Date()
   };
-  var dataStr = JSON.stringify(data, undefined, 2);
+  var gitinfoStr = JSON.stringify(data, undefined, 2);
 
-  fs.writeFile(filePath, dataStr, function (err) {
-    callback(err);
+  fs.writeFile(filePath, gitinfoStr, function (err) {
+    callback(err, data);
   });
 };
 
