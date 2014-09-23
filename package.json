@@ -1,0 +1,21 @@
+{
+  "name": "gitinfo-brunch",
+  "version": "0.1.0",
+  "description": "Adds git info about your build in a file.",
+  "author": "Alexander Johansson <alexander@n1s.se>",
+  "homepage": "https://github.com/KATT/gitinfo-brunch",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:KATT/gitinfo-brunch.git"
+  },
+  "engines": {
+    "node": ">=0.10"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "lodash": "^2.4.1",
+    "shelljs": "^0.3.0"
+  },
+  "keywords": [
+  ]
+}
